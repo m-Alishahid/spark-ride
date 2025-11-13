@@ -1,0 +1,127 @@
+"use client";
+import React from "react";
+import Link from "next/link";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+
+export default function Footer() {
+  const quickLinks = [
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" },
+  ];
+
+  const contactInfo = [
+    { label: "Email", value: "info@sparkride.com" },
+    { label: "Phone", value: "(123) 456-7890" },
+    { label: "Address", value: "123 Main Street, City, State" },
+  ];
+
+  const socialLinks = [
+    { name: "Facebook", icon: FaFacebookF, href: "https://facebook.com" },
+    { name: "Instagram", icon: FaInstagram, href: "https://instagram.com" },
+    { name: "Twitter", icon: FaTwitter, href: "https://twitter.com" },
+  ];
+
+  const packageNames = [
+    "Window Tinting",
+    "Ceramic Coating",
+    "Paint Correction",
+    "Mobile Detailing",
+    "Engine Detailing",
+  ];
+
+  return (
+    <footer className="bg-background text-foreground py-10 border-t border-card-border">
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
+        {/* Top Section */}
+        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-y-8 gap-x-10 border-b border-card-border pb-8">
+          {/* Logo + Description */}
+          <div className="flex-1 space-y-3">
+            <div className="flex items-center space-x-3">
+              <img
+                src="/sparkride.png"
+                alt="Spark Ride Logo"
+                className="h-12 w-12"
+              />
+            </div>
+            <p className="text-sm mt-8 max-w-sm text-foreground-secondary leading-relaxed">
+              Spark Ride is your destination for premium car detailing and
+              maintenance. Let your car shine like new again with our expert
+              services.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div className="flex-1">
+            <h3 className="text-lg font-semibold mb-4 text-primary-blue">
+              Quick Links
+            </h3>
+            <ul className="space-y-2">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.path}
+                    className="hover:text-primary-blue transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Packages */}
+          <div className="flex-1">
+            <h3 className="text-lg font-semibold mb-4 text-primary-blue">
+              Our Packages
+            </h3>
+            <ul className="space-y-2">
+              {packageNames.map((pkg) => (
+                <li
+                  key={pkg}
+                  className="hover:text-primary-blue cursor-pointer transition-colors"
+                >
+                  {pkg}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info + Socials */}
+          <div className="flex-1">
+            <h3 className="text-lg font-semibold mb-4 text-primary-blue">
+              Contact Us
+            </h3>
+            <ul className="space-y-2 text-sm text-foreground-secondary">
+              {contactInfo.map((info) => (
+                <li key={info.label}>
+                  <strong>{info.label}:</strong> {info.value}
+                </li>
+              ))}
+            </ul>
+            <div className="flex space-x-5 mt-5">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xl hover:scale-110 transition-transform duration-300 text-primary-blue hover:text-blue-600"
+                  title={social.name}
+                >
+                  <social.icon />
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-6 text-center text-sm text-foreground-secondary">
+          <p>© {new Date().getFullYear()} Spark Ride. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
