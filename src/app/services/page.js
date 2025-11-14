@@ -61,7 +61,7 @@ export default function ServicesPage() {
                     </ul>
 
                     <div className="mt-auto">
-                      <Button className="w-full bg-[var(--text-color)] text-black hover:bg-[var(--text-color)]/80">
+                      <Button className="w-full bg-[var(--text-color)] text-black hover:bg-[var(--text-color)]/80" onClick={() => window.location.href = '/booking'}>
                         Book Now
                       </Button>
                     </div>
@@ -84,7 +84,7 @@ export default function ServicesPage() {
             the Spark Ride difference.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-[var(--text-color)] text-black hover:bg-[var(--text-color)]/80 px-8 py-3">
+            <Button className="bg-[var(--text-color)] text-black hover:bg-[var(--text-color)]/80 px-8 py-3" onClick={() => window.location.href = '/booking'}>
               Book Appointment
             </Button>
             <Button

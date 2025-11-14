@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
+import { Button } from "@/components/ui/button";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -56,7 +57,8 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen mt-20 bg-[var(--charcoal-bg)] text-[var(--white-color)]">
+    <div className="min-h-screen bg-[var(--charcoal-bg)] text-[var(--white-color)]">
+      <Navbar />
 
       {/* Hero Section */}
       <section className="py-20 px-6 text-center">
@@ -92,7 +94,6 @@ export default function Contact() {
             </p>
           </div>
 
-
           <div className="border-t border-gray-600 pt-6 mt-6">
             <h3 className="text-lg font-semibold text-[var(--text-color)] mb-3">
               Why Choose Spark Ride?
@@ -115,6 +116,15 @@ export default function Contact() {
                 <span>Satisfaction guaranteed</span>
               </li>
             </ul>
+          </div>
+
+          <div className="mt-6">
+            <Button
+              onClick={() => window.location.href = '/booking'}
+              className="w-full bg-[var(--text-color)] hover:bg-[var(--text-color)]/80 text-black font-semibold py-2 rounded-lg transition"
+            >
+              Book Now
+            </Button>
           </div>
         </div>
 
@@ -190,6 +200,8 @@ export default function Contact() {
           </button>
         </form>
       </section>
+
+      <Footer />
     </div>
   );
 }

@@ -20,11 +20,11 @@ import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  service,
+  serviceTypes as service,
   additionalServices,
   extraServices,
   timeSlots,
-  cityStateMap,
+  allCities as cityStateMap,
   vehicleTypes,
   calculatePrice as baseCalculatePrice,
 } from "@/utils/services";
@@ -48,10 +48,10 @@ import Image from "next/image";
 
 // ✅ Safe wrapper for calculatePrice
 const calculatePrice = (
-  vehicleType: string,
-  packageId: string,
-  serviceCategory: string,
-  vehicleSize?: number
+  vehicleType,
+  packageId,
+  serviceCategory,
+  vehicleSize
 ) => {
   const price = baseCalculatePrice(vehicleType, packageId, serviceCategory, vehicleSize || 0);
   if (!price || isNaN(price)) {
@@ -62,7 +62,19 @@ const calculatePrice = (
 };
 
 // ---------------- CONFIRMATION MODAL ----------------
-const ConfirmationModal = ({ open, onClose, formData, total, subtotal, isPromoValid }: any) => {
+interface ConfirmationModalProps {
+  open: boolean;
+  onClose: () => void;
+  formData: {
+    vehicles: { make: string; model: string; year: string }[];
+    firstName: string;
+  };
+  total: number;
+  subtotal: number;
+  isPromoValid: boolean;
+}
+
+const ConfirmationModal = ({ open, onClose, formData, total, subtotal, isPromoValid }: ConfirmationModalProps) => {
   return (
     <Dialog open={open} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-lg bg-gradient-to-br from-gray-900 to-black border border-gray-700 text-white">

@@ -58,6 +58,7 @@ export default function HeroSection() {
             <Button
               size="lg"
               className="bg-primary hover:bg-[#0E9AC3] text-white rounded-full px-8 py-4 text-lg font-semibold shadow-soft hover:shadow-hover transition-all duration-300 hover:scale-105"
+              onClick={() => window.location.href = '/booking'}
             >
               Book Now
             </Button>

@@ -110,7 +110,7 @@ export default function Navbar() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <a
-              href="#contact"
+              href="/booking"
               className="bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-[#0E9AC3] transition-all duration-300 hover:scale-105 shadow-soft hover:shadow-hover"
             >
               Start Booking
