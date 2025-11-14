@@ -107,7 +107,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xl hover:scale-110 transition-transform duration-300 text-primary-blue hover:text-blue-600"
+                  className="text-xl hover:scale-110 transition-transform duration-300 text-primary-blue hover:text-[#10B5DB]"
                   title={social.name}
                 >
                   <social.icon />

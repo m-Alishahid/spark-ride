@@ -50,7 +50,7 @@ export default function PaintCorrectionPage() {
           >
             <Link
               href="/contact"
-              className="bg-blue-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-600 transition-all duration-300 shadow-lg"
+              className="bg-[#10B5DB] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#0E9AC3] transition-all duration-300 shadow-lg"
             >
               Book Now - Starting at ${service.packages[0].price}
             </Link>
@@ -128,7 +128,7 @@ export default function PaintCorrectionPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white p-6 rounded-2xl shadow-lg text-center"
                 >
-                  <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                  <div className="w-12 h-12 bg-[#10B5DB] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                     {index + 1}
                   </div>
                   <p className="text-gray-700 font-medium">{step}</p>
@@ -185,10 +185,10 @@ export default function PaintCorrectionPage() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white p-8 rounded-2xl shadow-lg border-2 hover:border-blue-500 transition-all duration-300 flex flex-col h-full"
+                  className="bg-white p-8 rounded-2xl shadow-lg border-2 hover:border-[#10B5DB] transition-all duration-300 flex flex-col h-full"
                 >
                   <h4 className="text-2xl font-bold text-gray-900 mb-4">{pkg.name}</h4>
-                  <div className="text-4xl font-extrabold text-orange-600 mb-6">${pkg.price}</div>
+                  <div className="text-4xl font-extrabold text-[#10B5DB] mb-6">${pkg.price}</div>
                   <ul className="space-y-2 mb-6">
                     {pkg.includes.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-gray-600">
@@ -199,7 +199,7 @@ export default function PaintCorrectionPage() {
                   </ul>
                   <Link
                     href="/contact"
-                    className="block bg-blue-500 text-white text-center py-3 rounded-full font-semibold hover:bg-blue-600 transition-all duration-300 mt-auto"
+                    className="block bg-[#10B5DB] text-white text-center py-3 rounded-full font-semibold hover:bg-[#0E9AC3] transition-all duration-300 mt-auto"
                   >
                     Choose Package
                   </Link>
@@ -215,12 +215,12 @@ export default function PaintCorrectionPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-8 rounded-2xl">
+            <div className="bg-gradient-to-r from-[#10B5DB] to-[#0E9AC3] text-white p-8 rounded-2xl">
               <h3 className="text-3xl font-bold mb-4">Service Duration: {service.duration}</h3>
               <p className="text-xl mb-6">Professional paint correction with 6-month warranty on finish quality</p>
               <Link
                 href="/contact"
-                className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg"
+                className="bg-white text-[#10B5DB] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg"
               >
                 Schedule Your Paint Correction Today
               </Link>

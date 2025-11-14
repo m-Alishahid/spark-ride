@@ -27,7 +27,7 @@ export default function ServiceSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-6xl font-extrabold text-blue-600 mb-6"
+          className="text-4xl md:text-6xl font-extrabold text-[#10B5DB] mb-6"
         >
           Our Premium Services
         </motion.h2>
@@ -63,14 +63,14 @@ export default function ServiceSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 
               {/* Duration Badge */}
-              <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              <div className="absolute top-4 right-4 bg-[#10B5DB] text-white px-3 py-1 rounded-full text-sm font-semibold">
                 {service.duration}
               </div>
             </div>
 
             {/* Content */}
             <div className="p-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#10B5DB] transition-colors">
                 {service.name}
               </h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
@@ -82,7 +82,7 @@ export default function ServiceSection() {
                 <div className="mb-4">
                   <h4 className="font-semibold text-gray-900 mb-2">Starting from:</h4>
                   <div className="flex items-center gap-2">
-                    <span className="text-2xl font-bold text-blue-600">
+                    <span className="text-2xl font-bold text-[#10B5DB]">
                       ${service.packages[0].price}
                     </span>
                     <span className="text-gray-500 text-sm">
@@ -99,12 +99,12 @@ export default function ServiceSection() {
                   <ul className="text-sm text-gray-600 space-y-1">
                     {service.process.slice(0, 3).map((step, idx) => (
                       <li key={idx} className="flex items-center">
-                        <span className="text-blue-500 mr-2">•</span>
+                        <span className="text-[#10B5DB] mr-2">•</span>
                         {step}
                       </li>
                     ))}
                     {service.process.length > 3 && (
-                      <li className="text-blue-500 font-medium">+{service.process.length - 3} more steps</li>
+                      <li className="text-[#10B5DB] font-medium">+{service.process.length - 3} more steps</li>
                     )}
                   </ul>
                 </div>
@@ -112,7 +112,7 @@ export default function ServiceSection() {
 
               <Link
                 href={`/services/${service.id}`}
-                className="inline-block bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-600 hover:scale-105 transition-all duration-300 shadow-lg w-full text-center"
+                className="inline-block bg-[#10B5DB] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#0E9AC3] hover:scale-105 transition-all duration-300 shadow-lg w-full text-center"
               >
                 View Details
               </Link>

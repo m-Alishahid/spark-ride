@@ -57,7 +57,7 @@ export default function HeroSection() {
           >
             <Button
               size="lg"
-              className="bg-primary hover:bg-blue-700 text-white rounded-full px-8 py-4 text-lg font-semibold shadow-soft hover:shadow-hover transition-all duration-300 hover:scale-105"
+              className="bg-primary hover:bg-[#0E9AC3] text-white rounded-full px-8 py-4 text-lg font-semibold shadow-soft hover:shadow-hover transition-all duration-300 hover:scale-105"
             >
               Book Now
             </Button>

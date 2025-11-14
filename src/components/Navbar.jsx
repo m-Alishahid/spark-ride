@@ -49,7 +49,7 @@ export default function Navbar() {
                 alt="Spark Ride Logo"
                 className="h-10 w-10 transition-transform duration-300 group-hover:scale-110"
               />
-              <span className="text-xl font-bold text-primary-blue font-['Poppins'] group-hover:text-blue-600 transition-colors duration-300">
+              <span className="text-xl font-bold text-primary-blue font-['Poppins'] group-hover:text-[#10B5DB] transition-colors duration-300">
                 Spark Ride
               </span>
             </a>
@@ -111,7 +111,7 @@ export default function Navbar() {
           <div className="hidden md:block">
             <a
               href="#contact"
-              className="bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-soft hover:shadow-hover"
+              className="bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-[#0E9AC3] transition-all duration-300 hover:scale-105 shadow-soft hover:shadow-hover"
             >
               Start Booking
             </a>
@@ -152,7 +152,7 @@ export default function Navbar() {
               <div className="pt-2">
                 <a
                   href="#contact"
-                  className="bg-primary-blue text-white block px-3 py-2 rounded-md text-base font-medium text-center hover:bg-blue-700 transition-colors duration-300"
+                  className="bg-primary-blue text-white block px-3 py-2 rounded-md text-base font-medium text-center hover:bg-[#0E9AC3] transition-colors duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Get Quote

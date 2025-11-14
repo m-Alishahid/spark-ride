@@ -158,7 +158,7 @@ export default function PackageServices() {
                   </span>
                   <Link
                     href="/contact"
-                    className="px-6 py-3 bg-primary-blue text-white rounded-xl font-bold hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-soft hover:shadow-hover"
+                    className="px-6 py-3 bg-primary-blue text-white rounded-xl font-bold hover:bg-[#0E9AC3] transition-all duration-300 hover:scale-105 shadow-soft hover:shadow-hover"
                   >
                     Book Now
                   </Link>
