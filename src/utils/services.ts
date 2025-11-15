@@ -7,11 +7,20 @@ export type ServicePackage = {
 };
 
 // Import data from existing files
-import { mainServices, serviceTypes } from '@/data/booking-service';
+import { mainServices, serviceTypes, timeSlots } from '@/data/booking-service';
+import { allCities } from '@/data/stateMapping';
 
 // Export main services with enhanced data
 export const service = serviceTypes;
 export const vehicleTypes = ['sedan', 'suv', 'truck', 'van', 'bike', 'boat', 'jetski', 'rv'];
+export const additionalServices = [
+  { id: "odor_removal", name: "Odor Removal", price: 50 },
+  { id: "pet_hair", name: "Pet Hair Removal", price: 40 },
+  { id: "engine_cleaning", name: "Engine Cleaning", price: 70 },
+  { id: "headlight_restore", name: "Headlight Restoration", price: 60 }
+];
+export { timeSlots };
+export { allCities };
 
 // Enhanced main services with process steps and duration
 export const enhancedMainServices = mainServices.map(service => ({
@@ -72,6 +81,26 @@ export const enhancedMainServices = mainServices.map(service => ({
     'Final dressing'
   ] : []
 }));
+
+// Calculate price function
+export const calculatePrice = (
+  vehicleType: string,
+  packageId: string,
+  serviceCategory: string,
+  vehicleSize?: number
+): number => {
+  const vehicleData = service.find(s => s.id === 'car-detailing')?.variants.find(v => v.id === vehicleType);
+  if (!vehicleData) return 0;
+
+  const pkg = vehicleData.packages.find(p => p.id === packageId);
+  if (!pkg) return 0;
+
+  if (pkg.pricingType === 'perFoot' && vehicleSize) {
+    return pkg.pricePerFt ? pkg.pricePerFt * vehicleSize : 0;
+  }
+
+  return pkg.price || 0;
+};
 
 export const extraServices = {
   ceramiccoating: {

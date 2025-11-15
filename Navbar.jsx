@@ -51,14 +51,12 @@ export default function Navbar() {
                     {link.title}
                   </Link>
                 ))}
-                <motion.a
-                  href="#booking"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <Link
+                  href="/booking"
                   className="bg-brand-orange text-white px-4 py-2 rounded-md text-sm font-medium ml-4"
                 >
                   Book Now
-                </motion.a>
+                </Link>
               </div>
             </div>
 
@@ -96,15 +94,13 @@ export default function Navbar() {
                   {link.title}
                 </Link>
               ))}
-              <motion.a
-                href="#booking"
+              <Link
+                href="/booking"
                 onClick={toggleMenu}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 className="bg-brand-orange text-white px-5 py-3 rounded-md text-base font-medium mt-4"
               >
                 Book Now
-              </motion.a>
+              </Link>
             </div>
           </motion.div>
         )}
