@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import CarWashingAdvertisment from "@/app/images/CarWashingAdvertisment.jpg";
+
 
 export default function AboutStory() {
   return (
@@ -29,7 +29,7 @@ export default function AboutStory() {
         {/* Image Section */}
         <div className="flex justify-center">
           <Image
-            src={CarWashingAdvertisment}
+            src="/CarWashingAdvertisment.jpg"
             alt="Spark Ride Car Detailing"
             width={550}
             height={400}

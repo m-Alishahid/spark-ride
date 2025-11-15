@@ -2,22 +2,22 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
-import SedanCarDetailing from "@/app/images/SedanCarDetailing.jpeg";
+
 import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-background via-background-secondary to-background-tertiary pt-16">
+    <section className="relative w-full min-h-screen overflow-hidden bg-linear-to-br from-background via-background-secondary to-background-tertiary pt-16">
       {/* Background Image with Light Overlay */}
       <div className="absolute inset-0">
         <Image
-          src={SedanCarDetailing}
+          src="/SedanCarDetailing.jpeg"
           alt="Premium Car Detailing"
           fill
           className="object-cover opacity-50"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/60 to-white/80" />
+        <div className="absolute inset-0 bg-linear-to-br from-white/80 via-white/60 to-white/80" />
       </div>
 
       {/* Centered Content */}
@@ -92,7 +92,7 @@ export default function HeroSection() {
 
       {/* Bottom Wave */}
       <motion.div
-        className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent"
+        className="absolute bottom-0 left-0 w-full h-24 bg-linear-to-t from-white to-transparent"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}

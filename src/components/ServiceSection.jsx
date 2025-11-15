@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { enhancedMainServices } from "@/utils/services";
-import CeramicCoating from "@/app/images/CeramicCoating.jpg";
-import WindowTinting from "@/app/images/WindowTinting.jpg";
-import PaintCorrection from "@/app/images/CarDetailing.jpg";
+import CeramicCoating from '../../public/CeramicCoating.jpg';
+import WindowTinting from '../../public/WindowTinting.jpg';
+import CarDetailing from '../../public/CarDetailing.jpg';
 
 export default function ServiceSection() {
   // Map service IDs to images
   const serviceImages = {
     'ceramic-coating': CeramicCoating,
     'window-tinting': WindowTinting,
-    'paint-correction': PaintCorrection,
+    'paint-correction': CarDetailing,
   };
 
   // Get first 3 services for homepage display
@@ -55,12 +55,12 @@ export default function ServiceSection() {
             {/* Image */}
             <div className="relative h-64 overflow-hidden">
               <Image
-                src={serviceImages[service.id] || CeramicCoating}
+                src={serviceImages[service.id] || '/CeramicCoating.jpg'}
                 alt={service.name}
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent"></div>
 
               {/* Duration Badge */}
               <div className="absolute top-4 right-4 bg-[#10B5DB] text-white px-3 py-1 rounded-full text-sm font-semibold">

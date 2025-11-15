@@ -4,9 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Star, Shield, Sparkles } from "lucide-react";
-import WindowTinting from "@/app/images/WindowTinting.jpg";
-import ProfessionalCeramicCoating from "@/app/images/ProfessionalCeramicCoating.jpg";
-import CarDetailing from "@/app/images/CarDetailing.jpg";
+
 
 export default function PackageServices() {
   const packages = [
@@ -21,7 +19,7 @@ export default function PackageServices() {
         "Hand Wax & Paint Protection",
         "Door Jamb & Trim Restoration",
       ],
-      image: CarDetailing,
+      image: "/CarDetailing.jpg",
       icon: <Star className="w-8 h-8 text-primary-blue" />,
       badge: "Most Popular",
       badgeColor: "bg-primary-blue",
@@ -37,7 +35,7 @@ export default function PackageServices() {
         "Scratch-Resistant Nano Film",
         "Factory Finish Guarantee",
       ],
-      image: WindowTinting,
+      image: "/WindowTinting.jpg",
       icon: <Shield className="w-8 h-8 text-primary-blue" />,
       badge: "Best Seller",
       badgeColor: "bg-primary-blue",
@@ -53,7 +51,7 @@ export default function PackageServices() {
         "UV Fade Resistance",
         "Gloss Enhancement Finish",
       ],
-      image: ProfessionalCeramicCoating,
+      image: "/ProfessionalCeramicCoating.jpg",
       icon: <Sparkles className="w-8 h-8 text-primary-blue" />,
       badge: "Premium",
       badgeColor: "bg-primary-blue",

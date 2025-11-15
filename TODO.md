@@ -1,11 +1,13 @@
-# Booking Page Integration and Error Fixes
+# Update Booking Form to Match Spark Ride Theme
 
-## Tasks to Complete
-
-- [x] Update HeroSection.jsx to link "Book Now" button to "/booking"
-- [x] Update services/page.js to link "Book Now" buttons to "/booking"
-- [x] Add booking links in About page (about/page.js) CTA sections
-- [x] Add booking links in Contact page (contact/page.js) CTA sections
-- [x] Fix imports in OrderSummaryAccordion.jsx to include missing utilities from "@/utils/services"
-- [x] Test the booking page after changes (dev server started)
-- [ ] Ensure all links work correctly (requires manual testing)
+## Tasks
+- [ ] Update overall container backgrounds from dark to light
+- [ ] Replace red accent color (#E53935) with primary blue (#10B5DB)
+- [ ] Update text colors from white to dark (foreground)
+- [ ] Update card backgrounds and borders to match theme
+- [ ] Update input/select backgrounds to white with dark text
+- [ ] Update progress indicators to use primary blue
+- [ ] Update button styles to match theme
+- [ ] Update confirmation modal styling
+- [ ] Test form functionality and responsiveness
+- [ ] Verify animations and transitions work smoothly

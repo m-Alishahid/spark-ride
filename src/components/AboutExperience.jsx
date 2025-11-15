@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Car, ShieldCheck, Wrench, Star, Award, Users, Clock } from "lucide-react";
-import ImagesCarWash from "@/app/images/ImagesCarWash.jpeg";
+
 
 export default function AboutExperience() {
   const features = [
@@ -91,8 +91,10 @@ export default function AboutExperience() {
             <div className="absolute -inset-6 bg-gradient-to-r from-primary-blue/30 to-blue-300/30 blur-3xl rounded-3xl opacity-0 group-hover:opacity-100 transition duration-1000"></div>
             <div className="relative rounded-3xl overflow-hidden shadow-soft border border-card-border">
               <Image
-                src={ImagesCarWash}
+                src="/ImagesCarWash.jpeg"
                 alt="Luxury Car Detailing Showcase"
+                width={600}
+                height={400}
                 className="w-full h-[400px] object-cover rounded-3xl transform group-hover:scale-110 transition duration-1000"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent rounded-3xl"></div>

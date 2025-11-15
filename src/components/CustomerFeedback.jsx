@@ -91,9 +91,9 @@ export function CustomerFeedback() {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center bg-background py-16 px-6 overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background-secondary via-background-tertiary to-background"></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_30%,_var(--primary-blue)_0%,_transparent_60%)] opacity-5"></div>
-      <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_70%,_var(--primary-blue)_0%,_transparent_60%)] opacity-5"></div>
+      <div className="absolute inset-0 bg-linear-to-br from-background-secondary via-background-tertiary to-background"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_30%,var(--primary-blue)_0%,transparent_60%)] opacity-5"></div>
+      <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_70%,var(--primary-blue)_0%,transparent_60%)] opacity-5"></div>
 
       <div className="relative z-10 max-w-6xl mx-auto text-center">
         {/* Section Header */}
@@ -129,7 +129,7 @@ export function CustomerFeedback() {
                       <CardContent className="flex flex-col items-center text-center p-8 space-y-6">
                         {/* Avatar */}
                         <div className="relative">
-                          <div className="absolute -inset-1 bg-gradient-to-r from-primary-blue to-blue-300 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+                          <div className="absolute -inset-1 bg-linear-to-r from-primary-blue to-blue-300 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
                           <Image
                             src={user.avatar}
                             alt={user.name}
