@@ -4,8 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { enhancedMainServices } from "@/utils/services";
-import ExteriorCleaningBefore from "/ExteriorCleaningBefore.png";
-import ExteriorCleaningAfter from "/ExteriorCleaningAfter.png";
+
 
 export default function PaintCorrectionPage() {
   const service = enhancedMainServices.find(s => s.id === 'paint-correction');
@@ -87,7 +86,7 @@ export default function PaintCorrectionPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src={ExteriorCleaningBefore}
+                  src="/images/ExteriorCleaningBefore.png"
                   alt="Before Paint Correction"
                   fill
                   className="object-cover"
@@ -98,7 +97,7 @@ export default function PaintCorrectionPage() {
               </div>
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src={ExteriorCleaningAfter}
+                  src="/images/ExteriorCleaningAfter.png"
                   alt="After Paint Correction"
                   fill
                   className="object-cover"

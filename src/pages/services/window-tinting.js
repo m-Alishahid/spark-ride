@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { enhancedMainServices } from "@/utils/services";
-import TintedAutoGlass from "/TintedAutoGlass.jpg";
-import TintGlassWindow from "/TintGlassWindow.jpeg";
 
 export default function WindowTintingPage() {
   const service = enhancedMainServices.find(s => s.id === 'window-tinting');
@@ -86,7 +84,7 @@ export default function WindowTintingPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-2xl shadow-lg text-center">
                 <Image
-                  src={TintGlassWindow}
+                  src="/images/TintGlassWindow.jpeg"
                   alt="Standard Tint"
                   width={300}
                   height={200}
@@ -98,7 +96,7 @@ export default function WindowTintingPage() {
               </div>
               <div className="bg-white p-6 rounded-2xl shadow-lg text-center border-2 border-orange-500">
                 <Image
-                  src={TintedAutoGlass}
+                  src="/images/TintedAutoGlass.jpg"
                   alt="Ceramic Tint"
                   width={300}
                   height={200}
